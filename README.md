@@ -1,2 +1,47 @@
-# roblox-codes-2021
-Welcome to roblox robux codes hack, this roblox robux codes free roblox robux money codes 2021 along with roblox robux codes unused gift cards and roblox robux coupon - Rather than being fooled by other roblox robux codes mods or fake tools, resort to this real-working roblox robux codes free roblox robux money codes 2021 to advance quickly with lightning speed. https://robuxcodes.tappalm.com KW: roblox robux codes roblox robux Coin Codes roblox robux codes roblox robux Free roblox robux codes roblox robux roblox robux codes roblox robux Hack roblox robux codes Free roblox robux roblox robux codes Unlimited money roblox robux codes roblox robux Glitch roblox robux codes money roblox robux codes roblox robux Generator roblox robux codes roblox robux Free Free roblox robux codes money roblox robux codes Free money roblox robux codes Free Redeem Codes How To Get Free roblox robux codes roblox robux How To Get roblox robux codes roblox robux Free roblox robux codes roblox robux roblox robux codes Free roblox robux roblox robux codes roblox robux Coin Codes 2021 roblox robux codes roblox robux 2021 Free roblox robux codes roblox robux 2021 roblox robux codes roblox robux Hack 2021 roblox robux codes Free roblox robux 2021 roblox robux codes Unlimited money 2021 roblox robux codes roblox robux Glitch 2021 roblox robux codes money 2021 roblox robux codes roblox robux Generator 2021 roblox robux codes roblox robux Free 2021 Free roblox robux codes money 2021 roblox robux codes Free money 2021 roblox robux codes Free Redeem Codes 2021 How To Get Free roblox robux codes roblox robux 2021 How To Get roblox robux codes roblox robux 2021 Free roblox robux codes roblox robux 2021 roblox robux codes Free roblox robux 2021 roblox robux codes Cheats 2021 Free roblox robux codes roblox robux Coin Codes roblox robux codes Hack Android roblox robux codes roblox robux Coin Codes Hack roblox robux codes Cheat Engine roblox robux codes Generator roblox robux codes Hack 2021 roblox robux codes currency hack roblox robux codes roblox robux CHEAT ENGINE roblox robux codes roblox robux CHEAT
+import os
+import random
+import string
+
+generated_codes = set()
+
+ascii_art = """
+\033[93m
+ ____       _                   ____          _           
+|  _ \ ___ | |__  _   ___  __  / ___|___   __| | ___  ___ 
+| |_) / _ \| '_ \| | | \ \/ / | |   / _ \ / _` |/ _ \/ __|
+|  _ < (_) | |_) | |_| |>  <  | |__| (_) | (_| |  __/\__ \\
+|_| \_\___/|_.__/ \__,_/_/\_\  \____\___/ \__,_|\___||___/
+===========================================================                                                           
+\033[0m
+"""
+
+def generate_gift_card_code():
+    code = '-'.join(''.join(random.choices(string.ascii_uppercase + string.digits, k=4)) for _ in range(3))
+    while code in generated_codes:
+        code = '-'.join(''.join(random.choices(string.ascii_uppercase + string.digits, k=4)) for _ in range(3))
+    generated_codes.add(code)
+    return code
+
+def print_valid_code(code):
+    if random.random() < 0.80:
+        code_hidden = code[:-2] + '**'
+        print(f"\033[91m[-] INVALID | {code_hidden}\033[0m")
+    else:
+        code_hidden = code[:-2] + '**'
+        print(f"\033[92m[+] VALID | {code_hidden}\033[0m")
+
+def main():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print(ascii_art)
+    num_cards = int(input("How Many Robux Codes?: "))
+        
+    for _ in range(num_cards):
+        code = generate_gift_card_code()
+        print_valid_code(code)
+
+    message = "(Valid Codes Been Put In Valid-Codes.txt & Invalid Codes Been Added To Invalid-Codes.txt)"
+    print("\033[91m\033[93m\033[92m\033[96m\033[94m\033[95m" + message + "\033[0m")
+    print("-" * len(message))
+
+if __name__ == "__main__":
+    main()
